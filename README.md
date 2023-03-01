@@ -1,3 +1,10 @@
+# RSV1_all.csv and RSV5_all.csv
+`Year`: 2010 to 2023
+
+`Month`: January "1" through December "12"
+
+`IR`: Incidence Rate
+
 # RSV_predict.R
 This file plots the observed and forecasted monthly incidence rate of first-time medically attended RSV in young children (new cases per 1,000,000 person-day).
 
@@ -33,10 +40,3 @@ Vertical lines are drawn at the January of each year `jans` and at the start of 
 * https://r4ds.had.co.nz/ Tibbles
 * https://www.dummies.com/article/academics-the-arts/math/statistics/how-to-calculate-a-confidence-interval-for-a-population-mean-when-you-know-its-standard-deviation-169722/ _z_* values for 80% Confidence Level
 * https://stats.stackexchange.com/questions/154346/fitted-confidence-intervals-forecast-function-r mean prediction intervals for `geom_polygon`
-
-# RSV1_all.csv and RSV5_all.csv
-`Year`: 2010 to 2023
-
-`Month`: January "1" through December "12"
-
-`IR`: Incidence Rate
