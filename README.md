@@ -24,7 +24,9 @@ Incidence rates from 2010 through 2019 are used to train the model
 rsv00 <- subset(rsv, Year >= 2010 & Year <= 2019)
 rsvt <-as_tsibble(rsv00, index=M)
 ```
-and predict forecasted values `fc_rsv <- forecast(fourier_rsv, h=37)`
+and predict forecasted values `fc_rsv <- forecast(fourier_rsv, h=37)` with an 80% confidence interval (upper bound `rsv_up`; lower bound `rsv_down`).
+
+Vertical lines are drawn at the January of each year `jans` and at the start of the pandemic `m2020`.
 
 ## Sources
 * https://otexts.com/fpp3/ Time series regression model
