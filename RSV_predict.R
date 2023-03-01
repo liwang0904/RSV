@@ -45,12 +45,16 @@ m2020 = ymd("2020 Jan", truncated = 1)
 
 augment(fourier_rsv) |>
   ggplot(aes(x = as.Date(M))) +
+             
   geom_vline(xintercept=jans, size = 0.7, linetype ='dotted', color='gray')+
   geom_vline(xintercept=as.Date(m2020), size = 1, linetype ='solid', color='#70f3ff')  +
+             
   geom_polygon(data=poly_shade, mapping=aes(x=as.Date(x), y=y * 1000000), alpha=0.2, fill = "#1f4365") +
+             
   geom_line(data=rsv2, aes(y = IR * 1000000, colour = "Observed", linetype="Observed"), size = .75) +
   geom_line(aes(y = .fitted * 1000000, colour = "Fitted", linetype="Fitted"), size = .75) +
   geom_line(data=fc_rsv, aes(y = .mean * 1000000, colour = "Expected", linetype="Expected"), size = .75) +
+             
   geom_point(aes(y = IR * 1000000, colour = "Observed"), size=1.5) +
   geom_point(data=rsv2, aes(y = IR * 1000000, colour = "Observed"), size = 1.5) +
   
