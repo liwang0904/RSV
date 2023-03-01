@@ -17,26 +17,7 @@ Project is created with:
 * R 4.2.2
 * RStudio version 2022.12.0+353
 
-## Installation
-To run this project, install libraries from CRAN:
-```
-install.packages("tidyverse")
-install.packages("fpp3")
-install.packages("scales")
-```
-
-## Code
-Incidence rates from 2010 through 2019 are used to train the model
-```
-rsv00 <- subset(rsv, Year >= 2010 & Year <= 2019)
-rsvt <-as_tsibble(rsv00, index=M)
-```
-and predict forecasted values `fc_rsv <- forecast(fourier_rsv, h=37)` with an 80% confidence interval (upper bound `rsv_up`; lower bound `rsv_down`).
-
-Vertical lines are drawn at the January of each year `jans` and at the start of the pandemic `m2020`.
-
 ## Sources
-* https://otexts.com/fpp3/ Time series regression model
-* https://r4ds.had.co.nz/ Tibbles
-* https://www.dummies.com/article/academics-the-arts/math/statistics/how-to-calculate-a-confidence-interval-for-a-population-mean-when-you-know-its-standard-deviation-169722/ _z_* values for 80% Confidence Level
-* https://stats.stackexchange.com/questions/154346/fitted-confidence-intervals-forecast-function-r mean prediction intervals for `geom_polygon`
+* Harrell, F. E. (2015). _Regression modeling strategies: With applications to linear models, logistic and ordinal regression, and survival analysis_ (2nd ed). Springer.
+* Ord, J. K., Fildes, R., & Kourentzes, N. (2017). _Principles of business forecasting_ (2nd ed.). Wessex Press Publishing Co.
+* Sheather, S. J. (2009). _A modern approach to regression with R._ Springer. 
