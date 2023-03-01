@@ -1,6 +1,6 @@
-library(tidyverse)
-library(fpp3)
-library(scales)
+if (!require("tidyverse")) install.packages("tidyverse")
+if (!require("fpp3")) install.packages("fpp3")
+if (!require("scales")) install.packages("scales")
 
 rsv <-read.csv("~/RSV/RSV1_all.csv")
 
