@@ -34,9 +34,9 @@ xxx <-rapply(fc_rsv$IR, function(x) head(x, 1))
 zzz = xxx[seq_along(xxx) %% 2 > 0]
 zzz2 = xxx[seq_along(xxx) %% 2 == 0]
 
-# 80% confidence interval
-rsv_up <-  fc_rsv$.mean + 1.28 * zzz2
-rsv_down <- fc_rsv$.mean - 1.28 * zzz2
+# 95% confidence interval
+rsv_up <-  fc_rsv$.mean + 1.96 * zzz2
+rsv_down <- fc_rsv$.mean - 1.96 * zzz2
 poly_shade=data.frame(x=c(fc_rsv$M,rev(fc_rsv$M)), y=c(rsv_up,rev(rsv_down)) )
 
 # Start of the pandemic (2020 January)
